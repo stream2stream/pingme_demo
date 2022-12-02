@@ -6,4 +6,4 @@ COPY ./target/pingme.jar /home/java_app/pingme.jar
 
 EXPOSE 8080
 
-ENTRYPOINT java -jar /home/java_app/pingme.jar
+ENTRYPOINT exec java -jar /home/java_app/pingme.jar
