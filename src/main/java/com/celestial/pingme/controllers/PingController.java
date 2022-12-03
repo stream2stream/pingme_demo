@@ -39,8 +39,8 @@ public class PingController
 	 * 
 	 * With this information we can automate the linking between the PODs
 	 */
-	final private	String	PINGME_K8_ENDPOINT = "REMOTE_PINGME_SERVER_EP_SERVICE_HOST"; 
-	final private	String	PINGME_K8_PORT = "REMOTE_PINGME_SERVER_EP_SERVICE_PORT"; 
+//	final private	String	PINGME_K8_ENDPOINT = "REMOTE_PINGME_SERVER_EP_SERVICE_HOST"; 
+//	final private	String	PINGME_K8_PORT = "REMOTE_PINGME_SERVER_EP_SERVICE_PORT"; 
 	private final String TIME_API = "/api/time";
 	private	PingService thePingService;
 	
@@ -75,15 +75,15 @@ public class PingController
 		String endpoint = System.getenv().getOrDefault(PINGME_ENDPOINT, null);
 
 		// Grads don't get this version, they must pass the environment variable
-		if( endpoint == null )
-		{
-			endpoint = System.getenv().getOrDefault(PINGME_K8_ENDPOINT, null);
-			if( endpoint != null )
-			{
-				String port = System.getenv().getOrDefault(PINGME_K8_PORT, "8080");
-				endpoint = "http://" + endpoint + ":" + port;
-			}
-		}
+//		if( endpoint == null )
+//		{
+//			endpoint = System.getenv().getOrDefault(PINGME_K8_ENDPOINT, null);
+//			if( endpoint != null )
+//			{
+//				String port = System.getenv().getOrDefault(PINGME_K8_PORT, "8080");
+//				endpoint = "http://" + endpoint + ":" + port;
+//			}
+//		}
 				
 		if(endpoint != null )
 		{
