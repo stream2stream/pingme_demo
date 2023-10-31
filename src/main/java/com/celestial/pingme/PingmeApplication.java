@@ -16,6 +16,7 @@ public class PingmeApplication
 	
 	public static void main(String[] args) 
 	{
+		System.out.println("Running application!");
 		SpringApplication.run(PingmeApplication.class, args);
 	}
 
